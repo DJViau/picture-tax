@@ -105,7 +105,7 @@ async fn call_create_proof_service(client: Arc<Mutex<ClientHandle>>, target_path
     Ok(result.proof)
 }
 
-async fn call_contract_call_service(client: Arc<Mutex<ClientHandle>>, proof: String) {
+async fn call_contract_call_service(client: Arc<Mutex<ClientHandle>>, _proof: String) {
     let client = client.lock().await;
 
     let request = ContractCallRequest {
